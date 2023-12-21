@@ -1,4 +1,4 @@
-.dopdown_menu {
+.navbar .nav-link{
   padding: 10px 13px;
   display: inline-block;
   height: 43px;
@@ -9,4 +9,15 @@
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;  
+}
+.navbar .navbar-nav .nav-link:hover{
+  transition-duration: .3s;
+  background: #fff;
+  box-shadow: -4px -4px 15px -4px rgba(0, 0, 0, 0.2);
+  border-color: rgba(0,0,0,.1);
+  background: #fff;;
+  color: #05a1f7;
+  text-shadow: none;
 }
