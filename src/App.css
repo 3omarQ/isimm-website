@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+}
+
+h1,h2,h3,p,a{
+  font-family: 'Montserrat','sans-serif';
+}
+header h1{
+  font-size: 4rem;
+}
+
+.navbar .nav-link{
+  font-size: 14px;
+  color: aliceblue;
+}
+.navbar .navbar-nav .nav-link:hover{
+  color:rgb(229, 184, 116);
+}
+nav .navbar-toggler:focus{
+  box-shadow:none;
+}
+
+.scale-hover-effect{
+  transition: transform .5s ease;
+}
+.scale-hover-effect:hover{
+  transform: scale(1.02);
+}
+
+
+.footer-social-icons li:hover svg{
+  fill: rgb(32, 29, 57);
+}
+
+.footer-navigation li:hover{
+  color: black;
+}
+@media only screen and (max-width: 992px){
+  #basic-navbar-nav {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 0.37rem;
+
+  }
+  .navbar .nav-link{
+    color:black;
+  }
+}
+@media only screen and (max-width:768px){
+  header h1{
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width:576px){
+  header h1{
+    font-size: 2rem;
+  }
+}

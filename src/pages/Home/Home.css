@@ -1,0 +1,12 @@
+.home-page header{
+    background-image: linear-gradient(rgba(5,10,35,0.75),rgba(5,10,35,0.75)), url(../../utils/images/isimm_beach2.jpg);
+}
+header{
+    background-size: cover;
+    background-position: center;
+}
+.blog-section{
+    background-image: linear-gradient(rgba(125, 132, 164, 0.75),rgba(5,10,35,0.75)),url(../../utils/images/isimm_study_room.jpg);
+    background-size: cover;
+    background-position: center;
+}

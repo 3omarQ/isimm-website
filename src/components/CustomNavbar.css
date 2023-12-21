@@ -1,0 +1,12 @@
+.dopdown_menu {
+  padding: 10px 13px;
+  display: inline-block;
+  height: 43px;
+  border: 1px solid transparent;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
