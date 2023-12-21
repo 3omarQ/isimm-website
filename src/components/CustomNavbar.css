@@ -10,7 +10,8 @@
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
-  font-size: 14px;  
+  font-size: 14px;
+  border-radius: 10px; 
 }
 .navbar .navbar-nav .nav-link:hover{
   transition-duration: .3s;
