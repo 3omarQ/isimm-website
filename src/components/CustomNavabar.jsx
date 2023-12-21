@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import logo from "../utils/images/icon.png";
+import "./CustomNavbar.css"
 
 function CustomNavbar() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -22,7 +23,7 @@ function CustomNavbar() {
   };
 
   return (
-    <Navbar expand="lg" className="position-absolute w-100">
+    <Navbar expand="lg" className="position-absolute">
       <Container>
         <Navbar.Brand>
           <Link to="/" className="navbar-brand d-flex align-items-center">

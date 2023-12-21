@@ -9,13 +9,14 @@ header h1{
   font-size: 4rem;
 }
 
-.navbar .nav-link{
+/*.navbar .nav-link{
   font-size: 14px;
   color: aliceblue;
 }
 .navbar .navbar-nav .nav-link:hover{
   color:rgb(229, 184, 116);
 }
+
 nav .navbar-toggler:focus{
   box-shadow:none;
 }
@@ -25,7 +26,7 @@ nav .navbar-toggler:focus{
 }
 .scale-hover-effect:hover{
   transform: scale(1.02);
-}
+}*/
 
 
 .footer-social-icons li:hover svg{
