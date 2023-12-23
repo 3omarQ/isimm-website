@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Switch, Route} from 'react-router-dom';
+import { Switch,Routes, Route} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
@@ -11,14 +11,16 @@ function App() {
   return (
     <div>
       <CustomNavbar/>
+      
 
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/courses" element={Courses} />
-        <Route path="/about" element={About} />
-        <Route path="/vie_etudiantine" element={Vie_Etudiantine} />
-        <Route path="/contact" element={Contact} />
-      </Switch>
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/courses" component={Courses} />
+          <Route path="/about" component={About} />
+          <Route path="/vie_etudiantine" component={Vie_Etudiantine} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+      
 
       <CustomFooter/>
 

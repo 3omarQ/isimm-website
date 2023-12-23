@@ -22,11 +22,12 @@ function Pourquoi() {
               </div>
               <Card.Body>
                 <Card.Title className="text-center text-capitalize mb-3">
-                  Score ymchi w yatla3
+                  Le score le plus haut de Monastir
                 </Card.Title>
                 <Card.Text className="text-center">
-                  meli dkhalt lel isimm w score te3ha ymchi w yatla3 machallah
-                  fet l score ta lpharmacie
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Neque, obcaecati. Nemo repudiandae itaque at aut, quas,
+                  reiciendis
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -47,11 +48,11 @@ function Pourquoi() {
               </div>
               <Card.Body>
                 <Card.Title className="text-center text-capitalize mb-3">
-                  Barcha events w opportunities w programs lbara
+                  Opportunités de bourse à l'etranger
                 </Card.Title>
                 <Card.Text className="text-center">
-                  Mr Lazhar mkather mel opportunities w dima fma programs lel UK
-                  wel europe
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab
+                  suscipit pariatur quod
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -75,8 +76,8 @@ function Pourquoi() {
                   We keep our students happy
                 </Card.Title>
                 <Card.Text className="text-center">
-                  nakhtarou ahsen l profet w fma events w fama clubs and tarfih
-                  fel fac, maktba mahloula 24/7
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                  nam architecto quae in
                 </Card.Text>
               </Card.Body>
             </Card>

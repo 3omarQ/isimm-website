@@ -1,0 +1,35 @@
+.courses-page header{
+    background-image: linear-gradient(rgba(5, 10, 35, 0.65),rgba(44, 51, 88, 0.75)),url(../../utils/images/biblio3.jpg);
+}
+.img{
+    filter:brightness(50%);
+}
+.courses-page .card-text{
+    font-size: x-small;
+    margin-top: 20px;
+    text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black; /* Outline effect */
+}
+.courses-page .button{
+    text-align: end;
+    font-size: small;
+    color: black;
+    
+}
+.courses-page .link{
+    text-align: end;
+    font-size: small;
+    color: lightblue;
+    
+}
+.courses-page .card-title{
+    margin-top: -40px;
+    color: rgb(255, 247, 235);
+    font-weight: 500;
+
+}
+.courses-page .icons{
+    width: 60px;
+    height: 60px;
+    margin-right: 40px;
+    filter: invert(40%) sepia(28%) saturate(486%) hue-rotate(174deg) brightness(95%) contrast(93%);
+}

@@ -25,7 +25,11 @@ function CustomNavbar() {
     <Navbar expand="lg" className="position-absolute w-100">
       <Container>
         <Navbar.Brand>
-          <Link to="/" className="navbar-brand d-flex align-items-center">
+          <Link
+            to="/home"
+            href="/home"
+            className="navbar-brand d-flex align-items-center"
+          >
             <img src={logo} width="120" height="90" alt="Logo" />
             <div>
               <div
@@ -49,7 +53,7 @@ function CustomNavbar() {
         ></Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-end w-100">
-            <Nav.Link href="/" className="text-uppercase">
+            <Nav.Link href="/home" className="text-uppercase">
               Home
             </Nav.Link>
             <NavDropdown
