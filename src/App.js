@@ -8,6 +8,7 @@ import Vie_Etudiantine from './pages/Vie_Etudiantine/Vie_Etudiantine';
 import CustomNavbar from './components/CustomNavabar';
 import CustomFooter from './components/CustomFooter';
 import Clubs from './pages/Clubs/Clubs';
+import Profil from './pages/Profil/Profil';
 function App() {
   return (
     <div>
@@ -15,12 +16,13 @@ function App() {
       
 
         <Switch>
-          <Route path="/home" component={Home} />
           <Route path="/courses" component={Courses} />
           <Route path="/about" component={About} />
           <Route path="/vie_etudiantine" component={Vie_Etudiantine} />
           <Route path="/contact" component={Contact} />
           <Route path="/clubs" component={Clubs} />
+          <Route path="/profil" component={Profil} />
+          <Route path="/" component={Home} />
         </Switch>
       
 

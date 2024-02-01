@@ -1,0 +1,15 @@
+.profile-left-part img {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%;
+}
+.socials img{
+  width: 20px; 
+  height: 20px; 
+    
+}
+.profile-left-part{
+  background: linear-gradient(to right bottom, rgb(79, 114, 150), rgb(133, 211, 253))
+  
+}
+
