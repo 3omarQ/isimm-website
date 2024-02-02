@@ -1,0 +1,19 @@
+article, section, .block {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+
+élément {
+  transform: translate(0%, 46.176%) translate3d(0px, 0px, 0px);
+}
+@media only screen and (min-width: 992px) {
+  .gallery-img.img-md {
+  }
+}
+@media only screen and (min-width: 992px) {
+  .gallery-img {
+    width: 33.33333333%;
+    height: 280px;
+  }
+}

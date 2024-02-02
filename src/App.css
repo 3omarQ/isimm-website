@@ -20,6 +20,20 @@ nav .navbar-toggler:focus{
   box-shadow:none;
 }
 
+.navbar .nav-item:hover > .nav-link {
+  color: rgb(229, 184, 116);
+} 
+
+.nav-link:focus
+{
+  color: #f27b05 !important;
+}
+
+.dropdown-menu {
+  margin-top: 0px !important;
+}
+
+
 .scale-hover-effect{
   transition: transform .5s ease;
 }

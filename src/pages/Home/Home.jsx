@@ -39,15 +39,7 @@ function Home() {
           <h2>Bienvenue à</h2>
           <h1 className="text-center fw-semibold">ISIMM</h1>
           <p>
-            L'ISIMM, l'Institut Supérieur d'Informatique et de Mathématiques de
-            Monastir, est un établissement public tunisien dédié à
-            l'enseignement supérieur et à la recherche scientifique. Créé par le
-            décret no1623 du 9 juillet 2002, il relève de l'Université de
-            Monastir et du Ministère de l'Enseignement Supérieur et de la
-            Recherche Scientifique. C'est un foyer où excellence académique et
-            innovation se rencontrent, réunissant une communauté dynamique
-            d'esprits curieux façonnant l'avenir de la technologie et de
-            l'exploration mathématique.
+            L’ISIMM est un établissement public tunisien dédié à l’enseignement supérieur et à la recherche scientifique. Créé en 2002, il relève de l’Université de Monastir et du Ministère de l’Enseignement Supérieur et de la Recherche Scientifique. L’ISIMM est un foyer où excellence académique et innovation se rencontrent, réunissant une communauté dynamique d’esprits curieux façonnant l’avenir de la technologie et de l’exploration mathématique. 🎓🚀
           </p>
           <div className="d-flex flex-column flex-sm-row align-items-center">
             <Link to="/courses">

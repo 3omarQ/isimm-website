@@ -10,3 +10,29 @@ header{
     background-size: cover;
     background-position: center;
 }
+
+.icons{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    
+  }
+
+  @media only screen and (max-width: 992px) {
+    #login.btn-outline-light {
+      background-color: #484747 !important;
+      color: #fff !important;
+    }
+  }
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: #a7a3a3 !important;
+}
+
+@media (min-width: 900px){
+  .navbar-expand-custom {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+  }
+}

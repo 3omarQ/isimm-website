@@ -8,6 +8,10 @@ import Vie_Etudiantine from './pages/Vie_Etudiantine/Vie_Etudiantine';
 import CustomNavbar from './components/CustomNavabar';
 import CustomFooter from './components/CustomFooter';
 import Clubs from './pages/Clubs/Clubs';
+import Foyer from './pages/Foyers/Foyer';
+import Restaurants from './pages/Restaurants/Restaurants';
+import Auth from './pages/Login/Authau';
+import Login from './pages/Login/Login';
 function App() {
   return (
     <div>
@@ -21,6 +25,9 @@ function App() {
           <Route path="/vie_etudiantine" component={Vie_Etudiantine} />
           <Route path="/contact" component={Contact} />
           <Route path="/clubs" component={Clubs} />
+          <Route path="/foyers" component={Foyer} />
+          <Route path="/restaurants" component={Restaurants} />
+          <Route path="/authentification" component={Auth} />
         </Switch>
       
 
