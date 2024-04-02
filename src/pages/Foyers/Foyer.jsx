@@ -27,7 +27,7 @@ function Foyers() {
             <h1 className=" fw-semibold">résidences des filles</h1>
           </div>
         </div>
-        <br/><br/>
+        <br/>
         <div className="legend">Foyer Universitaire Fattouma Bourguiba</div>
         <div className="map-responsive">
         <iframe
@@ -40,7 +40,7 @@ function Foyers() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
         </div>
-        <br/><br/>
+        <br/>
         <div className="legend">Foyer Universitaire 3 Août</div>
         <div className="map-responsive">
         <iframe

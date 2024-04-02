@@ -6,7 +6,7 @@ import ieee from "../../utils/images/ieee.jpg";
 import cri from "../../utils/images/cri.jpg";
 import atia from "../../utils/images/ATIA.jpg";
 import cpu from "../../utils/images/cpu.jpg";
-import GalleryComponent from "./GalleryComponent";
+import ImageGallery from "../../components/ImageGallery/ImageGallery";
 const courses = {
   clubs: [
     {
@@ -74,7 +74,9 @@ function Clubs() {
       </header>
       <br/>
       <div className="container pb-4">
-        
+      <div className="container pb-4 text-center">
+        <h1 className="fw-semibold">rejoignez nos clubs</h1>
+      </div>
         <div className="row g-4">
           {courses.clubs.map((course) => (
             <div key={course.id} className="col-lg-4">
@@ -108,6 +110,11 @@ function Clubs() {
           ))}
         </div>
       </div>
+      <hr />
+      <div className="container pb-4 text-center">
+        <h1 className="fw-semibold">Quelques moments</h1>
+        <ImageGallery />
+      </div>      
       <hr />
     </div>
   );

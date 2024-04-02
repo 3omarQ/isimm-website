@@ -4,13 +4,41 @@ const Login = () => {
     const [identifier, setIdentifier] = useState('');
     const [password, setPassword] = useState('');
     const [buttonClass, setButtonClass] = useState('_1gfg6utt');
-    const handleFormSubmit1 = (e) => {
+    const [selectedButton, setSelectedButton] = useState(null);
+
+    const handleIdentifierChange = (e) => {
+      setIdentifier(e.target.value);
+      updateButtonClass(e.target.value, password);
+    };
+  
+    const handlePasswordChange = (e) => {
+      setPassword(e.target.value);
+      updateButtonClass(identifier, e.target.value);
+    };
+  
+    const updateButtonClass = (identifier, password) => {
+      if (identifier.trim() !== '' && password.trim() !== '') {
+        setButtonClass('_6n7s3pu');
+      } else {
+        setButtonClass('_1gfg6utt');
+      }
+    };
+
+    //when the button is clicked it changes the style
+    //the previously clicked button gets to his initial
+    const handleButtonClick = (button) => {
+      setSelectedButton(button);
+      console.log(selectedButton);
+    };
+    /* const handleFormSubmit1 = (e) => {
         setIdentifier(e.target.value);
         e.preventDefault();
       
         if (identifier.trim() !== '' && password.trim() !== '') {
           setButtonClass('_6n7s3pu');
-        }else setButtonClass('_1gfg6utt');
+        }else if (identifier.trim() == '' || password.trim() == '') {
+          setButtonClass('_1gfg6utt');
+        }
       };
 
       const handleFormSubmit2 = (e) => {
@@ -19,8 +47,10 @@ const Login = () => {
       
         if (identifier.trim() !== '' && password.trim() !== '') {
           setButtonClass('_6n7s3pu');
+        }else if (identifier.trim() == '' || password.trim() == '') {
+          setButtonClass('_1gfg6utt');
         }
-      };
+      }; */
   return (
     <div className="_1tm0qdw">
       <section className="_11tqpu9b">
@@ -30,7 +60,7 @@ const Login = () => {
             <h2 className="_1ivff18a">Ravis de vous retrouver !</h2>
             <div className="_1cslqzes">
               <span>
-                En se connectant à Khan Academy, vous acceptez nos{' '}
+                En se connectant à ISIMM, vous acceptez nos{' '}
                 <a href="/about/tos" target="_blank" style={{ color: 'inherit' }}>
                   Conditions d’utilisation
                 </a>{' '}
@@ -49,9 +79,24 @@ const Login = () => {
           <span tabIndex="-1"></span>
           <div className="_2wrx56">
             <div className="_1rcl08e">
-                <button className="_1m2ob3wg">Etudiant</button>
-                <button className="_1m2ob3wg">Enseignant</button>
-                <button className="_1m2ob3wg">Administrateur</button>
+              <button
+                className={`_1m2ob3wg ${selectedButton === 'etudiant' ? 'selected' : ''}`}
+                onClick={() => handleButtonClick('etudiant')}
+              >
+                Etudiant
+              </button>
+              <button
+                className={`_1m2ob3wg ${selectedButton === 'enseignant' ? 'selected' : ''}`}
+                onClick={() => handleButtonClick('enseignant')}
+              >
+                Enseignant
+              </button>
+              <button
+                className={`_1m2ob3wg ${selectedButton === 'administrateur' ? 'selected' : ''}`}
+                onClick={() => handleButtonClick('administrateur')}
+              >
+                Administrateur
+              </button>
             </div>
 
             <form className="_wgmchy">
@@ -77,7 +122,7 @@ const Login = () => {
                   aria-invalid="false"
                   aria-required="true"
                   className="_1azps1m"
-                  onChange={handleFormSubmit1}
+                  onChange={handleIdentifierChange}
                 />
               </div>
               <div aria-hidden="true" className="_4bsxcct"></div>
@@ -99,7 +144,7 @@ const Login = () => {
                   aria-invalid="false"
                   aria-required="true"
                   className="_1azps1m"
-                  onChange={handleFormSubmit2}
+                  onChange={handlePasswordChange}
                 />
               </div>
               <div aria-hidden="true" className="_j45ygct"></div>

@@ -29,10 +29,3 @@ header{
   background-color: #a7a3a3 !important;
 }
 
-@media (min-width: 900px){
-  .navbar-expand-custom {
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-  }
-}
