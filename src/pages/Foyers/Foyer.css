@@ -1,0 +1,79 @@
+.foyers-page header{
+    background-image: linear-gradient(rgba(5, 10, 35, 0.65),rgba(44, 51, 88, 0.75)),url(../../utils/images/biblio3.jpg);
+}
+.img{
+    filter:brightness(50%);
+}
+.foyers-page .card-text{
+    font-size: x-small;
+    margin-top: 20px;
+    text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black; /* Outline effect */
+}
+.foyers-page .button{
+    text-align: end;
+    font-size: small;
+    color: black;
+    
+}
+.foyers-page .link{
+    text-align: end;
+    font-size: small;
+    color: lightblue;
+    
+}
+.foyers-page .card-title{
+    margin-top: -40px;
+    color: rgb(255, 247, 235);
+    font-weight: 500;
+
+}
+.foyers-page .icons{
+    width: 60px;
+    height: 60px;
+    margin-right: 40px;
+    
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    position: relative;
+    height: 0;
+  }
+
+  @media (min-width: 962px) {
+    .map-responsive {
+      overflow: hidden;
+      width: 700px;
+      height: 391.5px;
+      margin: 0 auto;
+      /* position: relative; */
+    }
+  }
+  @media (min-width: 962px) { 
+  .map-responsive iframe {
+    left: 0 ;
+    top: 0;
+    border: 0;
+    height: 600px;
+    width: 391.5px;
+    position: absolute;
+  }
+  }
+  .map-responsive iframe {
+    left: 0 ;
+    top: 0;
+    border: 0;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .legend {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    top: -20px;
+    position: relative;
+  }
+  

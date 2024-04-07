@@ -1,9 +1,9 @@
 // CustomNavbar.js
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import logo from "../utils/images/icon.png";
-
+import user from "../utils/images/user.png";
 function CustomNavbar() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showDropdown2, setShowDropdown2] = useState(false);
@@ -21,9 +21,13 @@ function CustomNavbar() {
     setShowDropdownId(false);
   };
   
+  const history = useHistory();
 
+  const handleButtonClick = () => {
+    history.push('/authentification');
+  };
   return (
-    <Navbar expand="lg" className="position-absolute w-100">
+    <Navbar expand="lg" className="position-absolute w-100 ">
       <Container>
         <Navbar.Brand>
           <Link
@@ -68,9 +72,10 @@ function CustomNavbar() {
               <NavDropdown.Item href="#action/3.2">Equipe</NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown
+            <NavDropdown 
               title="Formation"
               id="basic-nav-dropdown"
+              style={{ marginTop: 0 }}
               show={showDropdown2}
               onMouseEnter={() => handleDropdownMouseEnter(setShowDropdown2)}
               onMouseLeave={() => handleDropdownMouseLeave(setShowDropdown2)}
@@ -88,8 +93,8 @@ function CustomNavbar() {
               onMouseEnter={() => handleDropdownMouseEnter(setShowDropdown3)}
               onMouseLeave={() => handleDropdownMouseLeave(setShowDropdown3)}
             >
-              <NavDropdown.Item href="#action/3.1">Foyer</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Restaurants universitaires</NavDropdown.Item>
+              <NavDropdown.Item href="/Foyers">Foyer</NavDropdown.Item>
+              <NavDropdown.Item href="/Restaurants">Restaurants universitaires</NavDropdown.Item>
               <NavDropdown.Item href="/Clubs">Nos clubs</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Les Evènements</NavDropdown.Item>
             </NavDropdown>
@@ -139,6 +144,15 @@ function CustomNavbar() {
               <NavDropdown.Item href="#action/3.1">Etudiant</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Entreprise</NavDropdown.Item>
             </NavDropdown>
+            
+            <button
+                type="button"
+                className="btn btn-outline-light  mx-0 mx-sm-2 my-2 my-sm-0 d-flex align-items-center"
+                id="login"  
+                onClick={handleButtonClick}
+              >s'authentifier
+              <img className="icons" src={user} />
+              </button>
           </Nav>
         </Navbar.Collapse>
       </Container>
