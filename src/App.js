@@ -12,6 +12,7 @@ import Profil from './pages/Profil/Profil';
 import Foyer from './pages/Foyers/Foyer';
 import Restaurants from './pages/Restaurants/Restaurants';
 import Auth from './pages/Login/Authau';
+import InboxPage from './pages/inboxPage/InboxPage';
 import Login from './pages/Login/Login';
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/clubs" component={Clubs} />
           <Route path="/profil" component={Profil} />
+          <Route path="/inbox" component={InboxPage} />
           <Route path="/foyers" component={Foyer} />
           <Route path="/restaurants" component={Restaurants} />
           <Route path="/authentification" component={Auth} />

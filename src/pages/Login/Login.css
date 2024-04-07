@@ -1465,7 +1465,7 @@
     clip:auto !important;
     height:auto !important;
     width:auto !important;
-    z-index:9999 !important;
+    z-index:0 !important;
   }
   ._19q5dyh:active {
     clip:auto !important;
