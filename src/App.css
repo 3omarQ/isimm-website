@@ -72,3 +72,7 @@ nav .navbar-toggler:focus{
     font-size: 2rem;
   }
 }
+
+.navbar {
+  z-index: 1000; 
+}

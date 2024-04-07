@@ -1,17 +1,3 @@
-.entete{
-    background-image: linear-gradient(rgba(5, 10, 35, 0.65),rgba(44, 51, 88, 0.75)),url(../../utils/images/profile_page_picture.jpg);
-    height: 120px;
-}
-.profile h1 {
-    font-size: 40px;
-
-}
-.profile .icons{
-    width: 60px;
-    height: 60px;
-    margin-right: 40px;
-    filter: invert(40%) sepia(28%) saturate(486%) hue-rotate(174deg) brightness(95%) contrast(93%);
-}
 
 .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
     background-color: #fff;
