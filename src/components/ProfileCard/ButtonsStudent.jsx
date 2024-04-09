@@ -9,13 +9,13 @@ import "../ButtonsStudent.css";
 function ButtonsStudent() {
   return (
     <div className="py-5">
-      <Link to="/courses">
+      <Link to="/account/notes">
         <button type="button" className="b btn btn-light btn-lg mx-0 mx-sm-2 ">
           <FontAwesomeIcon icon={faFileAlt} className="mr-3" />
           Consulter les notes
         </button>
       </Link>
-      <Link to="/contact">
+      <Link to="/account/schedule">
         <button type="button" className="b btn btn-light btn-lg mx-0 mx-sm-2 ">
           <FontAwesomeIcon icon={faClock} className="mr-3" />
           Emploi du temps
