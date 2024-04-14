@@ -1,12 +1,10 @@
 import React from "react";
+import "./blog.css";
 import { Link } from "react-router-dom";
-import "./Home.css";
 import { Card } from "react-bootstrap";
 import Blog1img from "../../utils/images/important.jpg";
 import Blog2img from "../../utils/images/actualite2.jpg";
 import Blog3img from "../../utils/images/actualite3.jpg";
-import Pourquoi from "../../components/ChooseSection/Pourquoi";
-
 const blogs = [
   {
     id: 1,
@@ -31,48 +29,18 @@ const blogs = [
   },
 ];
 
-function Home() {
+function blog() {
   return (
-    <div className="home-page">
-      <header className="h-100 min-vh-100 d-flex align-items-center text-light">
-        <div className="container d-flex flex-column align-items-center">
-          <h2>Bienvenue à</h2>
-          <h1 className="text-center fw-semibold">ISIMM</h1>
-          <p>
-            L’ISIMM est un établissement public tunisien dédié à l’enseignement
-            supérieur et à la recherche scientifique. Créé en 2002, il relève de
-            l’Université de Monastir et du Ministère de l’Enseignement Supérieur
-            et de la Recherche Scientifique. L’ISIMM est un foyer où excellence
-            académique et innovation se rencontrent, réunissant une communauté
-            dynamique d’esprits curieux façonnant l’avenir de la technologie et
-            de l’exploration mathématique. 🎓🚀
+    <div className="blog-page">
+      <header className="height-75">
+        <div className="container h-100 d-flex flex-column align-items-center justify-content-center text-light">
+          <h1 className="text-center fw-semibold">Blog </h1>
+          <p className="text-center w-75 mb-3 mt-4">
+            Découvrez toutes nos actualités
           </p>
-          <div className="d-flex flex-column flex-sm-row align-items-center">
-            <Link to="/courses">
-              <button
-                type="button"
-                className="btn btn-light btn-lg mx-0 mx-sm-2 my-2 my-sm-0"
-              >
-                Nos filières
-              </button>
-            </Link>
-            <Link to="/contact">
-              <button
-                type="button"
-                className="btn btn-outline-light btn-lg mx-0 mx-sm-2 my-2 my-sm-0"
-              >
-                Contactez-nous
-              </button>
-            </Link>
-          </div>
         </div>
       </header>
-
-      <div className="py-5">
-        <Pourquoi />
-      </div>
-
-      <div className="blog-section text-light py-5">
+      <div className="blog-sectionn text-dark py-5">
         <div className="container d-flex flex-column align-items-center">
           <h2 className="text-center text-capitalize mb-5">Nos actualités</h2>
           <div className="row g-4">
@@ -90,15 +58,10 @@ function Home() {
               </div>
             ))}
           </div>
-          <Link to="/blog">
-            <button type="button" className="btn btn-light btn-lg mt-4">
-              Voir plus..
-            </button>
-          </Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default Home;
+export default blog;

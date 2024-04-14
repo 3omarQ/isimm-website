@@ -20,14 +20,14 @@ function CustomNavbar() {
   const handleDropdownMouseLeave = (setShowDropdownId) => {
     setShowDropdownId(false);
   };
-  
+
   const history = useHistory();
 
   const handleButtonClick = () => {
-    history.push('/authentification');
+    history.push("/authentification");
   };
   return (
-    <Navbar expand="lg" className="position-absolute w-100 ">
+    <Navbar expand="lg" className="position-absolute w-100">
       <Container>
         <Navbar.Brand>
           <Link
@@ -58,101 +58,55 @@ function CustomNavbar() {
         ></Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-end w-100">
-            <Nav.Link href="/home" className="text-uppercase">Home</Nav.Link>
-            <NavDropdown
-              title="ISIMM"
-              id="basic-nav-dropdown"
-              show={showDropdown}
-              onMouseEnter={() => handleDropdownMouseEnter(setShowDropdown)}
-              onMouseLeave={() => handleDropdownMouseLeave(setShowDropdown)}
+            <Nav.Link href="/home" className="text-uppercase">
+              Home
+            </Nav.Link>
 
-              className="dopdown_menu"
-            >
-              <NavDropdown.Item href="#action/3.1">Présentation</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Equipe</NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown 
+            <Nav.Link
               title="Formation"
               id="basic-nav-dropdown"
               style={{ marginTop: 0 }}
-              show={showDropdown2}
-              onMouseEnter={() => handleDropdownMouseEnter(setShowDropdown2)}
-              onMouseLeave={() => handleDropdownMouseLeave(setShowDropdown2)}
+              href="/courses"
+              className="text-uppercase"
             >
-              <NavDropdown.Item href="#action/3.1">Cycle préparatoire intégré</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Cycle Ingénieur</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Master</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Licence</NavDropdown.Item>
-            </NavDropdown>
+              Formation
+            </Nav.Link>
 
             <NavDropdown
-              title="Vie Etudiantine"
+              title="VIE ETUDIANTINE"
               id="basic-nav-dropdown"
               show={showDropdown3}
               onMouseEnter={() => handleDropdownMouseEnter(setShowDropdown3)}
               onMouseLeave={() => handleDropdownMouseLeave(setShowDropdown3)}
             >
               <NavDropdown.Item href="/Foyers">Foyer</NavDropdown.Item>
-              <NavDropdown.Item href="/Restaurants">Restaurants universitaires</NavDropdown.Item>
+              <NavDropdown.Item href="/Restaurants">
+                Restaurants universitaires
+              </NavDropdown.Item>
               <NavDropdown.Item href="/Clubs">Nos clubs</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Les Evènements</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Les Evènements
+              </NavDropdown.Item>
             </NavDropdown>
-
-            {/* <NavDropdown
-              title="Vie Associative"
+            <Nav.Link
+              title="Contact"
               id="basic-nav-dropdown"
-              show={showDropdown4}
-              onMouseEnter={() => handleDropdownMouseEnter(setShowDropdown4)}
-              onMouseLeave={() => handleDropdownMouseLeave(setShowDropdown4)}
+              style={{ marginTop: 0 }}
+              href="/contact"
+              className="text-uppercase"
             >
-            </NavDropdown> */}
+              Contact
+            </Nav.Link>
 
-            <NavDropdown
-              title="International"
-              id="basic-nav-dropdown"
-              show={showDropdown5}
-              onMouseEnter={() => handleDropdownMouseEnter(setShowDropdown5)}
-              onMouseLeave={() => handleDropdownMouseLeave(setShowDropdown5)}
-            >
-              <NavDropdown.Item href="#action/3.1">Programmes de mobilité</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Stages à l'étranger</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Les partenaires</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Consultations et offres</NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown
-              title="Recherche"
-              id="basic-nav-dropdown"
-              show={showDropdown6}
-              onMouseEnter={() => handleDropdownMouseEnter(setShowDropdown6)}
-              onMouseLeave={() => handleDropdownMouseLeave(setShowDropdown6)}
-            >
-              <NavDropdown.Item href="#action/3.1"></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2"></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2"></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2"></NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown
-              title="Entreprise"
-              id="basic-nav-dropdown"
-              show={showDropdown7}
-              onMouseEnter={() => handleDropdownMouseEnter(setShowDropdown7)}
-              onMouseLeave={() => handleDropdownMouseLeave(setShowDropdown7)}
-            >
-              <NavDropdown.Item href="#action/3.1">Etudiant</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Entreprise</NavDropdown.Item>
-            </NavDropdown>
-            
             <button
-                type="button"
-                className="btn btn-outline-light  mx-0 mx-sm-2 my-2 my-sm-0 d-flex align-items-center"
-                id="login"  
-                onClick={handleButtonClick}
-              >s'authentifier
+              type="button"
+              className="btn btn-outline-light  mx-sm-2 my-1 my-sm-0 d-flex align-items-center"
+              id="login"
+              onClick={handleButtonClick}
+            >
+              s'authentifier
               <img className="icons" src={user} />
-              </button>
+            </button>
           </Nav>
         </Navbar.Collapse>
       </Container>
