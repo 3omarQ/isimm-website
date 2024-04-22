@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react"; // Add useEffect for fetching data
 import { Container, Row, Col, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -27,6 +27,25 @@ const profil_exemple = {
   github: "@3omarQ",
 };
 function Profile() {
+  const [profileData, setProfileData] = useState(null);
+
+  /* useEffect(() => {
+    fetchProfile(); // Implement this function
+  }, []); // Empty dependency array to fetch profile only once on component mount */
+
+  /* const fetchProfile = async (username) => {
+    try {
+      const response = await fetch(`http://localhost:8080/api/isimm/students/${username}/profile`);
+      if (response.ok) {
+        const data = await response.json();
+        setProfileData(data);
+      } else {
+        console.error("Failed to fetch profile");
+      }
+    } catch (error) {
+      console.error("Error fetching profile:", error);
+    }
+  }; */
   return (
     <div>
       <div className="container mt-4 mb-4 d-flex justify-content-between align-items-center">
@@ -56,16 +75,13 @@ function Profile() {
       <Container className="py-1 pt-3">
         <Row className="justify-content-right align-items-center h-100">
           <Col lg="6" className="mb-lg-0">
-            <ProfileCard data={profil_exemple} />
+            {/* {profileData && <ProfileCard data={profileData} />} */}
           </Col>
           <Col>
             <Row>
-              <VieAssociative data={profil_exemple} />
+              {/* {profileData && <VieAssociative data={profileData} />} */}
             </Row>
-            <Row>
-              {" "}
-              <ButtonsStudent></ButtonsStudent>
-            </Row>
+            <Row> {/* {profileData && <ButtonsStudent />} */}</Row>
           </Col>
         </Row>
       </Container>

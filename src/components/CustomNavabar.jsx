@@ -89,6 +89,15 @@ function CustomNavbar() {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link
+              title="Blog"
+              id="basic-nav-dropdown"
+              style={{ marginTop: 0 }}
+              href="/blog"
+              className="text-uppercase"
+            >
+              Blog
+            </Nav.Link>
+            <Nav.Link
               title="Contact"
               id="basic-nav-dropdown"
               style={{ marginTop: 0 }}

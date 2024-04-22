@@ -1,31 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // Add useEffect for fetching data
 import inbox_icon from "../../../utils/images/inbox.png";
 import emploi_exemple from "../../../utils/pdfs/emploi.pdf";
 import { Col, Row, ListGroup, Card } from "react-bootstrap";
 
 function Inbox() {
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      subject: "Message 1 Subject",
-      date: "2024-04-08",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet recusandae eligendi sed, doloribus modi nulla quos id expedita earum laborum eius aperiam facere quas impedit dolores, nesciunt minus placeat! Laboriosam?",
-    },
-    {
-      id: 2,
-      subject: "Message 2 Subject",
-      date: "2024-04-07",
-      content: "Message 2 Content",
-    },
-    // Add more messages as needed
-  ]);
-  const [selectedMessage, setSelectedMessage] = useState(null);
+  const [messages, setMessages] = useState([]); /* Initial state for messages */
+  const [selectedMessage, setSelectedMessage] =
+    useState(null); /* Initial state for selected message */
+
+  /* useEffect(() => {
+    
+    fetchMessages(); // Implement this function
+  }, []); // Empty dependency array to fetch messages only once on component mount */
+
+  /* const fetchMessages = async (username) => {
+    try {
+      
+      const response = await fetch(`http://localhost:8080/api/isimm/students/${username}/messages`);
+      if (response.ok) {
+        const data = await response.json();
+        setMessages(data);
+      } else {
+        console.error("Failed to fetch messages");
+      }
+    } catch (error) {
+      console.error("Error fetching messages:", error);
+    }
+  }; */
 
   // Function to handle message selection
   const handleSelectMessage = (message) => {
     setSelectedMessage(message);
   };
+
   return (
     <div>
       <div className="container mt-4 mb-4 d-flex justify-content-between align-items-center">
@@ -72,3 +79,5 @@ function Inbox() {
 }
 
 export default Inbox;
+
+/*this is the inbox of a specific student that is logged in, i only wrote a general inbox page*/

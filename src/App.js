@@ -8,14 +8,10 @@ import Blog from './pages/Blog/blog';
 import CustomNavbar from './components/CustomNavabar';
 import CustomFooter from './components/CustomFooter';
 import Clubs from './pages/Clubs/Clubs';
-import Profil from './pages/Profil/Profil';
 import Foyer from './pages/Foyers/Foyer';
 import Restaurants from './pages/Restaurants/Restaurants';
 import Auth from './pages/Login/Authau';
 import Account from './pages/Account/Account';
-import Login from './pages/Login/Login';
-import Inbox from './pages/Inbox/inbox';
-import compose from './pages/Compose/compose';
 function App() {
   return (
     <div>
@@ -28,13 +24,11 @@ function App() {
           <Route path="/blog" component={Blog} />
           <Route path="/contact" component={Contact} />
           <Route path="/clubs" component={Clubs} />
-          <Route path="/profil" component={Profil} />
           <Route path="/account" component={Account} />
           <Route path="/foyers" component={Foyer} />
           <Route path="/restaurants" component={Restaurants} />
           <Route path="/authentification" component={Auth} />
-          <Route path="/inbox" component={Inbox}/>
-          <Route path="/compose" component={compose}/>
+      
           <Route path="/" component={Home} />
         </Switch>
       

@@ -16,10 +16,10 @@ function Account() {
         <Sidebar></Sidebar>
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <Switch>
-            <Route path="/account/profile" component={Profile} />
             <Route path="/account/schedule" component={Schedule} />
             <Route path="/account/inbox" component={Inbox} />
             <Route path="/account/notes" component={Notes} />
+            <Route path="/account/" component={Profile} />
           </Switch>
         </Box>
       </Box>

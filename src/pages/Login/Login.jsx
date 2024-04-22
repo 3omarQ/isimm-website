@@ -1,36 +1,36 @@
-import React, {useState} from 'react';
-import "./Login.css"
+import React, { useState } from "react";
+import "./Login.css";
 const Login = () => {
-    const [identifier, setIdentifier] = useState('');
-    const [password, setPassword] = useState('');
-    const [buttonClass, setButtonClass] = useState('_1gfg6utt');
-    const [selectedButton, setSelectedButton] = useState(null);
+  const [identifier, setIdentifier] = useState("");
+  const [password, setPassword] = useState("");
+  const [buttonClass, setButtonClass] = useState("_1gfg6utt");
+  const [selectedButton, setSelectedButton] = useState(null);
 
-    const handleIdentifierChange = (e) => {
-      setIdentifier(e.target.value);
-      updateButtonClass(e.target.value, password);
-    };
-  
-    const handlePasswordChange = (e) => {
-      setPassword(e.target.value);
-      updateButtonClass(identifier, e.target.value);
-    };
-  
-    const updateButtonClass = (identifier, password) => {
-      if (identifier.trim() !== '' && password.trim() !== '') {
-        setButtonClass('_6n7s3pu');
-      } else {
-        setButtonClass('_1gfg6utt');
-      }
-    };
+  const handleIdentifierChange = (e) => {
+    setIdentifier(e.target.value);
+    updateButtonClass(e.target.value, password);
+  };
 
-    //when the button is clicked it changes the style
-    //the previously clicked button gets to his initial
-    const handleButtonClick = (button) => {
-      setSelectedButton(button);
-      console.log(selectedButton);
-    };
-    /* const handleFormSubmit1 = (e) => {
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    updateButtonClass(identifier, e.target.value);
+  };
+
+  const updateButtonClass = (identifier, password) => {
+    if (identifier.trim() !== "" && password.trim() !== "") {
+      setButtonClass("_6n7s3pu");
+    } else {
+      setButtonClass("_1gfg6utt");
+    }
+  };
+
+  //when the button is clicked it changes the style
+  //the previously clicked button gets to his initial
+  const handleButtonClick = (button) => {
+    setSelectedButton(button);
+    console.log(selectedButton);
+  };
+  /* const handleFormSubmit1 = (e) => {
         setIdentifier(e.target.value);
         e.preventDefault();
       
@@ -60,12 +60,20 @@ const Login = () => {
             <h2 className="_1ivff18a">Ravis de vous retrouver !</h2>
             <div className="_1cslqzes">
               <span>
-                En se connectant à ISIMM, vous acceptez nos{' '}
-                <a href="/about/tos" target="_blank" style={{ color: 'inherit' }}>
+                En se connectant à ISIMM, vous acceptez nos{" "}
+                <a
+                  href="/about/tos"
+                  target="_blank"
+                  style={{ color: "inherit" }}
+                >
                   Conditions d’utilisation
-                </a>{' '}
-                et{' '}
-                <a href="/about/privacy-policy" target="_blank" style={{ color: 'inherit' }}>
+                </a>{" "}
+                et{" "}
+                <a
+                  href="/about/privacy-policy"
+                  target="_blank"
+                  style={{ color: "inherit" }}
+                >
                   notre Politique de confidentialité
                 </a>
                 .
@@ -80,20 +88,26 @@ const Login = () => {
           <div className="_2wrx56">
             <div className="_1rcl08e">
               <button
-                className={`_1m2ob3wg ${selectedButton === 'etudiant' ? 'selected' : ''}`}
-                onClick={() => handleButtonClick('etudiant')}
+                className={`_1m2ob3wg ${
+                  selectedButton === "etudiant" ? "selected" : ""
+                }`}
+                onClick={() => handleButtonClick("etudiant")}
               >
                 Etudiant
               </button>
               <button
-                className={`_1m2ob3wg ${selectedButton === 'enseignant' ? 'selected' : ''}`}
-                onClick={() => handleButtonClick('enseignant')}
+                className={`_1m2ob3wg ${
+                  selectedButton === "enseignant" ? "selected" : ""
+                }`}
+                onClick={() => handleButtonClick("enseignant")}
               >
                 Enseignant
               </button>
               <button
-                className={`_1m2ob3wg ${selectedButton === 'administrateur' ? 'selected' : ''}`}
-                onClick={() => handleButtonClick('administrateur')}
+                className={`_1m2ob3wg ${
+                  selectedButton === "administrateur" ? "selected" : ""
+                }`}
+                onClick={() => handleButtonClick("administrateur")}
               >
                 Administrateur
               </button>
@@ -110,7 +124,11 @@ const Login = () => {
                   className="_1x6ahvlr"
                   data-test-id="identifier-label"
                 >
-                  Identifiant<span aria-hidden="true" className="_euf586"> *</span>
+                  Identifiant
+                  <span aria-hidden="true" className="_euf586">
+                    {" "}
+                    *
+                  </span>
                 </label>
                 <div aria-hidden="true" className="_akfsuo"></div>
                 <div aria-hidden="true" className="_xg1f1zo"></div>
@@ -132,7 +150,11 @@ const Login = () => {
                   className="_1x6ahvlr"
                   data-test-id="password-label"
                 >
-                  Mot de passe<span aria-hidden="true" className="_euf586"> *</span>
+                  Mot de passe
+                  <span aria-hidden="true" className="_euf586">
+                    {" "}
+                    *
+                  </span>
                 </label>
                 <div aria-hidden="true" className="_akfsuo"></div>
                 <div aria-hidden="true" className="_xg1f1zo"></div>
@@ -151,17 +173,21 @@ const Login = () => {
               <a className="_da68dmd" href="/forgotpw">
                 Mot de passe oublié ?
               </a>
-              <button
+              <a
                 type="submit"
                 data-test-id="log-in-submit-button"
                 role="button"
                 aria-disabled="true"
                 className={buttonClass}
+                href="/account"
               >
-                <span className="_1gw4cnik" data-test-id="log-in-submit-button-inner-label">
+                <span
+                  className="_1gw4cnik"
+                  data-test-id="log-in-submit-button-inner-label"
+                >
                   Connectez-vous
                 </span>
-              </button>
+              </a>
             </form>
             <div className="_1tz93mn">
               <a className="_1666bk1u" href="/signup">

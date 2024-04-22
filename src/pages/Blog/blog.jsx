@@ -30,6 +30,26 @@ const blogs = [
 ];
 
 function blog() {
+  // const [blogs, setBlogs] = useState([]);
+
+  /*
+  useEffect(() => {
+    fetchBlogs(); // Implement this function
+  }, []); // Empty dependency array to fetch blogs only once on component mount */
+
+  /* const fetchBlogs = async () => {
+    try {
+      const response = await fetch(`http://localhost:8080/api/isimm/blogs`);
+      if (response.ok) {
+        const data = await response.json();
+        setBlogs(data);
+      } else {
+        console.error("Failed to fetch blogs");
+      }
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+    }
+  }; */
   return (
     <div className="blog-page">
       <header className="height-75">

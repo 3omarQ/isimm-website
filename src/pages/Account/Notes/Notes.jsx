@@ -1,12 +1,31 @@
-import React from "react";
-import ScheduleIcon from "@mui/icons-material/Schedule";
+import React, { useState, useEffect } from "react"; // Add useEffect for fetching data
 import { Container, Row, Col, Form } from "react-bootstrap";
 import notes_icon from "../../../utils/images/grades.png";
-import emploi_exemple from "../../../utils/pdfs/emploi.pdf";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Notes() {
+  const [marks, setMarks] = useState([]);
+  /*
+  useEffect(() => {
+    
+    fetchMarks(); // Implement this function
+  }, []); // Empty dependency array to fetch marks only once on component mount */
+
+  /* const fetchMarks = async (ClassId) => {
+    try {
+      
+      const response = await fetch(`http://localhost:8080/api/isimm/classes/${ClassId}/marks`);
+      if (response.ok) {
+        const data = await response.json();
+        setMarks(data);
+      } else {
+        console.error("Failed to fetch marks");
+      }
+    } catch (error) {
+      console.error("Error fetching marks:", error);
+    }
+  }; */
   return (
     <div>
       <div className="container mt-4 mb-4 d-flex justify-content-between align-items-center">
@@ -34,13 +53,15 @@ function Notes() {
       </div>
       <hr />
       <div className="container align-items-center justify-content-center d-flex">
-        <iframe
-          src="https://drive.google.com/embeddedfolderview?id=1dMFK1guLjQxVW1yr0ZSEKjwiY5-zuYCC#grid"
-          frameborder="0"
-          width="100%"
-          height="600px"
-          border="0"
-        ></iframe>
+        {marks.map((marks, index) => (
+          <iframe
+            src={marks.link}
+            frameborder="0"
+            width="100%"
+            height="600px"
+            border="0"
+          ></iframe>
+        ))}
       </div>
       <hr />
     </div>

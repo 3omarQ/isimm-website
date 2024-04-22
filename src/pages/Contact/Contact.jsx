@@ -6,6 +6,12 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 
 function Contact() {
+  // Function to handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Implement form submission logic here
+  };
+
   return (
     <div className="contact-page">
       <header className="height-75">
@@ -16,7 +22,7 @@ function Contact() {
       </header>
 
       <div className="container my-5 d-flex justify-content-center ">
-        <Form id="contact-form">
+        <Form id="contact-form" onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Col sm={12} md={6} className="mb-3 mb-md-0">
               <Form.Label>Prénom</Form.Label>
